@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- Your head content goes here -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover, user-scalable=no" />
+   <meta name="theme-color" content="#ffffff" />
+   <!-- Add other meta tags, links, and icons as needed -->
+
+   <!-- Preload images -->
+   <link rel="preload" as="image" href="error-image.png">
+   <link rel="preload" as="image" href="your-app-logo.png">
+
+   <style>
+      body {
+         margin: 0;
+         overflow: hidden;
+         font-family: Arial, sans-serif;
+      }
+
+      .error-container {
+         position: fixed;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background: #f5f5f5;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+      }
+
+      .error-image {
+         max-width: 80%;
+         max-height: 40%;
+      }
+
+      .app-logo {
+         max-width: 20%;
+         margin-top: 20px;
+      }
+
+      .error-message {
+         margin-top: 20px;
+         text-align: center;
+         color: #333;
+      }
+
+      .play-store-button {
+         margin-top: 20px;
+         padding: 10px 20px;
+         background-color: #405DE6;
+         color: #fff;
+         text-decoration: none;
+         border-radius: 5px;
+         font-weight: bold;
+      }
+
+      .loading-animation {
+         position: fixed;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 3px; /* Adjust the height of the loading animation bar */
+         background: linear-gradient(to right, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80, #405DE6);
+         animation: moveGradient 4s linear infinite;
+         background-size: 200% 100%;
+      }
+
+      @keyframes moveGradient {
+         0% {
+            background-position: 200% 0;
+         }
+         100% {
+            background-position: -200% 0;
+         }
+      }
+   </style>
+</head>
+<body>
+   <div class="error-container">
+      <img class="error-image" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgs8kJe3_QK9FKaWLZhX8e8n-L2x6cTOG-DyDJGmK8AW_qi6_rVsiV_i05AT37kiwEmScPBRhnTG6e-a_q9M_sCYZaSEMHyN4Pgpk7GrFLnmNzgi0lUgLJTCVCBgbO46B13cezeTH0MQ5perTPGE0tYosNjmT7y-DERnw5Mf3Cp-RAeigFl2YyNDvIC4XzI/s709/Picsart_24-01-14_21-54-19-644.png" alt="Error Image">
+      <img class="app-logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEizRZCNDymy3UrfS0Ab3_38z7dKCTck38vB1PjYPhY4UjvrmxhkIwz4X505d8kO4t6nGJ8nmtQaOF5nH6QI6xeb-_LX2p0XFylx1vJiyWzomTDRjCqksgmY2xi4eVicJPVHX43jYOS02QjQWV1SBUh8NNWb3J-x-vzGN8bJ9quhznLCFtcV-GRGW7ihJ9Jn/s2828/Picsart_24-01-14_19-59-45-457.png" alt="App Logo">
+      <p class="error-message">You are using an older version of this app. Please update to the latest version for the best experience.</p>
+      <a class="play-store-button" href="https://play.google.com/store/apps/details?id=com.instagram.android" target="_blank">Update on Play Store</a>
+   </div>
+   <div class="loading-animation"></div>
+</body>
+</html>
